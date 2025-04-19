@@ -1,4 +1,4 @@
-# ========== FUNÇÕES DE USUÁRIO ==========
+
 
 def filtrar_usuario(cpf, usuarios):
     usuarios_filtrados = [usuario for usuario in usuarios if usuario["cpf"] == cpf]
@@ -44,7 +44,7 @@ def excluir_usuario(usuarios, contas):
     usuarios.remove(usuario)
     print("Usuário excluído com sucesso!")
 
-# ========== FUNÇÕES DE CONTA CORRENTE ==========
+
 
 def gerar_numero_conta(contas):
     if not contas:
@@ -92,7 +92,6 @@ def encerrar_conta(contas):
     contas.remove(conta)
     print("Conta encerrada com sucesso!")
 
-# ========== FUNÇÕES FINANCEIRAS ==========
 
 def depositar(contas):
     numero_conta = int(input("Informe o número da conta para depósito: "))
@@ -156,7 +155,7 @@ def exibir_extrato(contas):
 def localizar_conta(numero_conta, contas):
     return next((conta for conta in contas if conta["numero_conta"] == numero_conta), None)
 
-# ========== MENU ==========
+
 
 def menu():
     return input("""
@@ -171,7 +170,7 @@ def menu():
 
 => """)
 
-# ========== PROGRAMA PRINCIPAL ==========
+
 
 def main():
     limite = 500
